@@ -55,7 +55,7 @@ class Repository
     }
     
     // 捕捉错误
-    protected function exception(Closure $function)
+    public function exception(Closure $function)
     {
         $function = $function->bindTo($this);
         
@@ -70,7 +70,7 @@ class Repository
     }
     
     // 保存
-    protected function save($data)
+    public function save($data)
     {
         return $this->model->fill($data)->save();
     }
