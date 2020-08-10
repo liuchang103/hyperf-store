@@ -20,7 +20,7 @@ class Query
     }
     
     // 获取 model
-    protected static function model($model = null)
+    public static function model($model = null)
     {
         if(!$model)
         {
