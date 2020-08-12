@@ -53,6 +53,8 @@ AdminRepository::make();
 操作指定 Model
 ```
 $admin = AdminRepository::make(Admin::find(1));
+// or
+$admin = AdminRepository::find(1);
 
 // 禁止登陆
 $admin->close();

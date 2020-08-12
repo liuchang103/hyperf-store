@@ -23,6 +23,19 @@ class Repository
         
         return $repository;
     }
+
+    // 查询放入
+    public static function find($id)
+    {
+        $repository = static::make();
+        
+        if($model = $repository->model()->find($id))
+        {
+            $repository->model($model);
+            
+            return $repository;
+        }
+    }
     
     // 放入或使用模型
     public function model(Model $model = null)
