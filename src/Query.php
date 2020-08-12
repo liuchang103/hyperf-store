@@ -24,7 +24,7 @@ class Query
     {
         if(!$model)
         {
-            return static::build();
+            $model = static::build();
         }
 
         if($model instanceof Repository)
