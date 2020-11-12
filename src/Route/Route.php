@@ -3,8 +3,6 @@
 declare(strict_types=1);
 namespace HyperfStore\Route;
 
-use Closure;
-
 class Route
 {
     // 当前命名空间
@@ -13,7 +11,12 @@ class Route
     // 使用空间空间
     public static function makeNamespace($name)
     {
-        return static::$namespace . '\\' . $name;
+        if($namespace = static::$namespace)
+        {
+            $namespace .= '\\';
+        }
+        
+        return $namespace . $name;
     }
     
     // 设置命名空间

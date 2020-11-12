@@ -3,7 +3,6 @@
 declare(strict_types=1);
 namespace HyperfStore\Route;
 
-use Closure;
 use Hyperf\HttpServer\Router\Router;
 
 class Handle
